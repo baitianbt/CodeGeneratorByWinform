@@ -242,13 +242,13 @@ namespace CodeGenerator.Services
                 sbInterface.AppendLine("}");
                 
                 // 保存接口
-                string repoPath = Path.Combine(_outputPath, "Repositories");
-                if (!Directory.Exists(repoPath))
+                string newRepoPath = Path.Combine(_outputPath, "Repositories");
+                if (!Directory.Exists(newRepoPath))
                 {
-                    Directory.CreateDirectory(repoPath);
+                    Directory.CreateDirectory(newRepoPath);
                 }
                 
-                File.WriteAllText(Path.Combine(repoPath, $"{interfaceName}.cs"), sbInterface.ToString());
+                File.WriteAllText(Path.Combine(newRepoPath, $"{interfaceName}.cs"), sbInterface.ToString());
             }
             
             // 生成实现
@@ -427,13 +427,13 @@ namespace CodeGenerator.Services
                 sbInterface.AppendLine("}");
                 
                 // 保存接口
-                string servicePath = Path.Combine(_outputPath, "Services");
-                if (!Directory.Exists(servicePath))
+                string newServicePath = Path.Combine(_outputPath, "Services");
+                if (!Directory.Exists(newServicePath))
                 {
-                    Directory.CreateDirectory(servicePath);
+                    Directory.CreateDirectory(newServicePath);
                 }
                 
-                File.WriteAllText(Path.Combine(servicePath, $"{interfaceName}.cs"), sbInterface.ToString());
+                File.WriteAllText(Path.Combine(newServicePath, $"{interfaceName}.cs"), sbInterface.ToString());
             }
             
             // 生成实现

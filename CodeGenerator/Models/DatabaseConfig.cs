@@ -28,7 +28,7 @@ namespace CodeGenerator.Models
             switch (DatabaseType)
             {
                 case DatabaseType.SqlServer:
-                    return $"Server={Server},{Port};Database={Database};User Id={Username};Password={Password};TrustServerCertificate=True;";
+                    return $"Server={Server};Database={Database};User Id={Username};Password={Password};TrustServerCertificate=True;";
                 case DatabaseType.MySQL:
                     return $"Server={Server};Port={Port};Database={Database};Uid={Username};Pwd={Password};";
                 case DatabaseType.PostgreSQL:

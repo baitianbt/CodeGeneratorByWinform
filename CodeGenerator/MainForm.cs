@@ -14,7 +14,7 @@ namespace CodeGenerator
     public partial class MainForm : Form
     {
         private readonly DatabaseService _databaseService;
-        private readonly CodeGenerationService _codeGenerationService;
+        private  CodeGenerationService _codeGenerationService;
         private DatabaseConfig _databaseConfig;
         private TableInfo _selectedTable;
         private string _outputPath;
